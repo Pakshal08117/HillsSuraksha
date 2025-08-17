@@ -14,7 +14,99 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          blood_group: string | null
+          created_at: string
+          date_of_birth: string | null
+          emergency_contacts: Json | null
+          full_name: string | null
+          id: string
+          languages: string[] | null
+          local_address: string | null
+          medical_tags: Json | null
+          phone: string | null
+          preferred_name: string | null
+          privacy_settings: Json | null
+          role: string | null
+          updated_at: string
+          user_id: string
+          verified_status: string | null
+        }
+        Insert: {
+          avatar_url?: string | null
+          blood_group?: string | null
+          created_at?: string
+          date_of_birth?: string | null
+          emergency_contacts?: Json | null
+          full_name?: string | null
+          id?: string
+          languages?: string[] | null
+          local_address?: string | null
+          medical_tags?: Json | null
+          phone?: string | null
+          preferred_name?: string | null
+          privacy_settings?: Json | null
+          role?: string | null
+          updated_at?: string
+          user_id: string
+          verified_status?: string | null
+        }
+        Update: {
+          avatar_url?: string | null
+          blood_group?: string | null
+          created_at?: string
+          date_of_birth?: string | null
+          emergency_contacts?: Json | null
+          full_name?: string | null
+          id?: string
+          languages?: string[] | null
+          local_address?: string | null
+          medical_tags?: Json | null
+          phone?: string | null
+          preferred_name?: string | null
+          privacy_settings?: Json | null
+          role?: string | null
+          updated_at?: string
+          user_id?: string
+          verified_status?: string | null
+        }
+        Relationships: []
+      }
+      user_activities: {
+        Row: {
+          activity_data: Json | null
+          activity_type: string
+          created_at: string
+          id: string
+          ip_address: unknown | null
+          location_data: Json | null
+          user_agent: string | null
+          user_id: string
+        }
+        Insert: {
+          activity_data?: Json | null
+          activity_type: string
+          created_at?: string
+          id?: string
+          ip_address?: unknown | null
+          location_data?: Json | null
+          user_agent?: string | null
+          user_id: string
+        }
+        Update: {
+          activity_data?: Json | null
+          activity_type?: string
+          created_at?: string
+          id?: string
+          ip_address?: unknown | null
+          location_data?: Json | null
+          user_agent?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
